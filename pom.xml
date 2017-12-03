@@ -109,6 +109,15 @@ http://www.qcloud.com</description>
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>disable-java8-doclint</id>
+            <activation>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <properties>
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </properties>
+        </profile>
     </profiles>
 
     <distributionManagement>
